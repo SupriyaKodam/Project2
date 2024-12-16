@@ -1,15 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import MenuIcon from '@mui/icons-material/Menu';
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import { useSelector } from 'react-redux';
 
 const Navbar = () => {
+  const carts = useSelector((state)=>state.allCart.carts)
+  console.log(carts)
   const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isBrandDropdownOpen, setIsBrandDropdownOpen] = useState(false);
+  const [cartCount, setCartCount] = useState(carts.length);
 
+  // Update cart count whenever the cart changes
+  useEffect(() => {
+    setCartCount(carts.length);
+  }, [carts]);
   // Function to toggle the menu visibility
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -71,7 +79,9 @@ const Navbar = () => {
               </div>
             )}
           </div>
+          <NavLink to="/mycart">
           <a className="hover:text-gray-900">My Cart</a>
+          </NavLink>
           <a onClick={() => handleNavigation('/contact')} className="hover:text-gray-900">Contact Us</a>
           <a onClick={() => handleNavigation('/aboutus')} className="hover:text-gray-900">About Us</a>
           <a className="hover:text-gray-900">Track Your Order</a>
@@ -79,7 +89,14 @@ const Navbar = () => {
 
         <div className="flex items-center space-x-4">
           <SearchIcon className="text-gray-700 hover:text-gray-900 cursor-pointer" />
-          <ShoppingCartIcon className="text-gray-700 hover:text-gray-900 cursor-pointer" />
+          <div>
+          <NavLink to="/mycart" className='relative'>
+  <ShoppingCartIcon style={{ fontSize: 40 }} className='text-black' />
+        <span className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-red-600 text-white text-xs font-bold rounded-full px-2">
+          {cartCount}
+        </span>
+</NavLink>
+              </div>
         </div>
       </div>
 
@@ -102,7 +119,9 @@ const Navbar = () => {
                 </div>
               )}
             </div>
+            <NavLink to="/mycart">
             <a className="hover:text-gray-900">My Cart</a>
+            </NavLink>
             <a onClick={() => handleNavigation('/contact')} className="hover:text-gray-900">Contact Us</a>
             <a onClick={() => handleNavigation('/aboutus')} className="hover:text-gray-900">About Us</a>
             <a className="hover:text-gray-900">Track Your Order</a>

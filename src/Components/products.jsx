@@ -1,0 +1,28 @@
+const products = [
+    { img: './Images/15th.AVIF', name: 'Urban Strider', price: '50', offer: '20% Off',qnty:'0' },
+    { img: './Images/shoe2.jpeg', name: 'Classic Walker', price: '70', offer: '15% Off',qnty:'0' },
+    { img: './Images/shoe3.jpeg', name: 'Trail Blazer', price: '60', offer: '25% Off',qnty:'0' },
+    { img: './Images/shoe4.jpeg', name: 'City Runner', price: '80', offer: '10% Off',qnty:'0' },
+    { img: './Images/shoe5.jpeg', name: 'Eco Stepper', price: '90', offer: '30% Off',qnty:'0' },
+    { img: './Images/shoe6.jpeg', name: 'Luxe Glide', price: '55', offer: '20% Off',qnty:'0' },
+    { img: './Images/shoe7.jpeg', name: 'Retro Sneaker', price: '75', offer: '18% Off',qnty:'0' },
+    { img: './Images/shoe8.jpeg', name: 'Comfy Cruiser', price: '65', offer: '12% Off',qnty:'0'},
+    { img: './Images/shoe9.jpeg', name: 'Swift Motion', price: '85', offer: '10% Off',qnty:'0' },
+    { img: './Images/shoe10.jpeg', name: 'Sleek Voyager', price: '95', offer: '22% Off',qnty:'0' },
+    { img: './Images/shoe11.jpeg', name: 'Cloud Comfort', price: '100', offer: '15% Off',qnty:'0' },
+    { img: './Images/shoe12.jpeg', name: 'Prime Flex', price: '120', offer: '20% Off',qnty:'0' },
+    { img: './Images/shoe13.jpeg', name: 'Sport Edge', price: '130', offer: '18% Off',qnty:'0' },
+    { img: './Images/shoe14.jpeg', name: 'Smooth Sprint', price: '140', offer: '10% Off',qnty:'0' },
+    { img: './Images/shoe15.jpeg', name: 'Flex Fusion', price: '150', offer: '25% Off',qnty:'0' },
+    { img: './Images/16th.webp', name: 'Bold Trek', price: '155', offer: '15% Off',qnty:'0' },
+    { img: './Images/18th.webp', name: 'Elite Trainer', price: '165', offer: '18% Off',qnty:'0' },
+    { img: './Images/8th.webp', name: 'Pure Pulse', price: '175', offer: '20% Off',qnty:'0' },
+    { img: './Images/9th.webp', name: 'Active Glide', price: '185', offer: '22% Off',qnty:'0' },
+    { img: './Images/10th.jpeg', name: 'Urban Nomad', price: '195', offer: '10% Off',qnty:'0' },
+    { img: './Images/11th.jpeg', name: 'Aero Motion', price: '205', offer: '15% Off',qnty:'0' },
+    { img: './Images/12th.jpeg', name: 'Core Classic', price: '215', offer: '18% Off',qnty:'0' },
+    { img: './Images/13th.webp', name: 'Comfort Craft', price: '225', offer: '20% Off',qnty:'0' },
+    { img: './Images/14th.webp', name: 'Heritage High', price: '235', offer: '25% Off',qnty:'0' },
+    { img: './Images/16th.webp', name: 'Zen Walk', price: '245', offer: '15% Off',qnty:'0' }
+  ];
+  export default products

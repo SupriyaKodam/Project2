@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import IconButton from '@mui/material/IconButton';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { NavLink } from 'react-router-dom';
 
 const LatestCollection = () => {
   // Array containing the image paths, names, and prices for shoes
@@ -84,6 +85,11 @@ const LatestCollection = () => {
                   <p className="font-semibold">{shoe.name}</p>
                   <p className="text-xl text-gray-700">{shoe.price}</p>
                 </div>
+                <NavLink to="/order">
+                <div className='text-center'>
+                <button className='bg-yellow-400 text-black font-bold p-3 border-2 border-black hover:bg-black hover:text-white rounded-lg'>Explore More</button>
+                </div>
+                </NavLink>
               </div>
             ))}
           </div>

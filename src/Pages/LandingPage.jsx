@@ -14,6 +14,7 @@ import Puma from '../Components/Puma';
 import Brand from '../Components/Brand';
 import Reebok from '../Components/reebok';
 import ShoeDetailsPage from '../Components/ShoeDetailsPage';
+import MyCart from '../Components/MyCart';
 
 const LandingPage = () => {
   return (
@@ -43,6 +44,7 @@ const LandingPage = () => {
           <Route path="/brand/puma" element={<Puma/>}/>
           <Route path="/brand/reebok" element={<Reebok/>}/>
           <Route path="/brand" element={<Brand/>}/>
+          <Route path="/mycart" element={<MyCart/>}/>
         </Routes>
       </div>
     </Router>
