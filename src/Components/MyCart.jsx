@@ -14,11 +14,11 @@ const MyCart = () => {
 const handleDecrement = (name) => {
     dispatch(removeToCart(name));
 };
-const handleIncrement = (product) => {
-    dispatch(incrementQuantity({name:product.name}));
+const handleIncrement = (name) => {
+    dispatch(incrementQuantity({name}));
 };
-const handleDecre = (product) => {
-    dispatch(decrementQuantity({ name:product.name }));
+const handleDecre = (name) => {
+    dispatch(decrementQuantity({name }));
 };
 
   return (
@@ -59,14 +59,14 @@ const handleDecre = (product) => {
                   <td className="p-2 border border-gray-300">{product.price}</td>
                   <td className="p-2 border border-gray-300">
                     <div className="flex items-center justify-center gap-2">
-                      <button className="px-2 py-1 bg-red-500 text-white rounded" onClick={() => handleDecre(product)}>-</button>
+                      <button className="px-2 py-1 bg-red-500 text-white rounded" onClick={() => handleDecre(product.name)}>-</button>
                       <input
                         type="text"
                         value={product.qnty}
                         readOnly
                         className="w-10 text-center border border-gray-300 rounded"
                       />
-                      <button className="px-2 py-1 bg-green-500 text-white rounded" onClick={() => handleIncrement(product)}>+</button>
+                      <button className="px-2 py-1 bg-green-500 text-white rounded" onClick={() => handleIncrement(product.name)}>+</button>
                     </div>
                   </td>
                   <td className="p-2 border border-gray-300">
