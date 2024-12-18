@@ -23,6 +23,23 @@ const products = [
     { img: './Images/12th.jpeg', name: 'Core Classic', price: '215', offer: '18% Off',qnty:'0' },
     { img: './Images/13th.webp', name: 'Comfort Craft', price: '225', offer: '20% Off',qnty:'0' },
     { img: './Images/14th.webp', name: 'Heritage High', price: '235', offer: '25% Off',qnty:'0' },
-    { img: './Images/16th.webp', name: 'Zen Walk', price: '245', offer: '15% Off',qnty:'0' }
+    { img: './Images/16th.webp', name: 'Zen Walk', price: '245', offer: '15% Off',qnty:'0' },
+    { id: 1, name: 'Nike Air Max', price: '$120', imgSrc: '/Images/shoe2.jpeg' },
+    { id: 2, name: 'Nike Air Force 1', price: '$110', imgSrc: '/Images/shoe8.jpeg' },
+    { id: 3, name: 'Nike Jordan', price: '$150', imgSrc: '/Images/shoe4.jpeg' },
+    { id: 4, name: 'Nike Pegasus', price: '$130', imgSrc: '/Images/shoe5.jpeg' },
+    { id: 5, name: 'Nike Free RN', price: '$100', imgSrc: '/Images/shoe6.jpeg' },
+    { id: 6, name: 'Nike React Infinity', price: '$140', imgSrc: '/Images/shoe7.jpeg' },
+    //adidas
+    { id: 1, name: 'adidas Air Max', price: '$120', imgSrc: '/Images/shoe8.jpeg' },
+    { id: 2, name: 'adidas Air Force 1', price: '$110', imgSrc: '/Images/shoe9.jpeg' },
+    { id: 3, name: 'adidas Jordan', price: '$150', imgSrc: '/Images/shoe10.jpeg' },
+    //puma
+    { id: 1, name: 'puma Air Max', price: '$120', imgSrc: '/Images/shoe14.jpeg' },
+    { id: 4, name: 'puma Pegasus', price: '$130', imgSrc: '/Images/3rd.jpeg' },
+
+   //reedok
+    { id: 2, name: 'reebok Air Force 1', price: '$110', imgSrc: '/Images/7th.webp' },
+    { id: 3, name: 'reebok Jordan', price: '$150', imgSrc: '/Images/8th.webp' },
   ];
   export default products

@@ -1,7 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { addToCart } from '../features/CartSlice';
+import { useDispatch } from 'react-redux';
 
 const ShoeDetailsPage = () => {
+  const dispatch=useDispatch();
+  useEffect(()=>{
+    window.scrollTo(0,0);
+},[]);
   const location = useLocation();  // Access the location state
   const navigate = useNavigate();
   
@@ -26,27 +32,28 @@ const ShoeDetailsPage = () => {
     setTimeout(() => {
       setPopupVisible(false); // Hide the popup after 2 seconds
     }, 1000);
+    dispatch(addToCart(shoe));
   };
 
 
   const shoes = [
-    { id: 1, name: 'Nike Air Max', price: '$120', imgSrc: '/Images/shoe2.jpeg' },
-    { id: 2, name: 'Nike Air Force 1', price: '$110', imgSrc: '/Images/shoe8.jpeg' },
-    { id: 3, name: 'Nike Jordan', price: '$150', imgSrc: '/Images/shoe4.jpeg' },
-    { id: 4, name: 'Nike Pegasus', price: '$130', imgSrc: '/Images/shoe5.jpeg' },
-    { id: 5, name: 'Nike Free RN', price: '$100', imgSrc: '/Images/shoe6.jpeg' },
-    { id: 6, name: 'Nike React Infinity', price: '$140', imgSrc: '/Images/shoe7.jpeg' },
+    { id: 1, name: 'Nike Air Max', price: '120', imgSrc: '/Images/shoe2.jpeg' },
+    { id: 2, name: 'Nike Air Force 1', price: '110', imgSrc: '/Images/shoe8.jpeg' },
+    { id: 3, name: 'Nike Jordan', price: '150', imgSrc: '/Images/shoe4.jpeg' },
+    { id: 4, name: 'Nike Pegasus', price: '130', imgSrc: '/Images/shoe5.jpeg' },
+    { id: 5, name: 'Nike Free RN', price: '100', imgSrc: '/Images/shoe6.jpeg' },
+    { id: 6, name: 'Nike React Infinity', price: '140', imgSrc: '/Images/shoe7.jpeg' },
     //adidas
-    { id: 1, name: 'adidas Air Max', price: '$120', imgSrc: '/Images/shoe8.jpeg' },
-    { id: 2, name: 'adidas Air Force 1', price: '$110', imgSrc: '/Images/shoe9.jpeg' },
-    { id: 3, name: 'adidas Jordan', price: '$150', imgSrc: '/Images/shoe10.jpeg' },
+    { id: 1, name: 'adidas Air Max', price: '120', imgSrc: '/Images/shoe8.jpeg' },
+    { id: 2, name: 'adidas Air Force 1', price: '110', imgSrc: '/Images/shoe9.jpeg' },
+    { id: 3, name: 'adidas Jordan', price: '150', imgSrc: '/Images/shoe10.jpeg' },
     //puma
-    { id: 1, name: 'puma Air Max', price: '$120', imgSrc: '/Images/shoe14.jpeg' },
-    { id: 4, name: 'puma Pegasus', price: '$130', imgSrc: '/Images/3rd.jpeg' },
+    { id: 1, name: 'puma Air Max', price: '120', imgSrc: '/Images/shoe14.jpeg' },
+    { id: 4, name: 'puma Pegasus', price: '130', imgSrc: '/Images/3rd.jpeg' },
 
    //reedok
-    { id: 2, name: 'reebok Air Force 1', price: '$110', imgSrc: '/Images/7th.webp' },
-    { id: 3, name: 'reebok Jordan', price: '$150', imgSrc: '/Images/8th.webp' },
+    { id: 2, name: 'reebok Air Force 1', price: '110', imgSrc: '/Images/7th.webp' },
+    { id: 3, name: 'reebok Jordan', price: '150', imgSrc: '/Images/8th.webp' },
     
 
   ].filter((item) => item.id !== shoe.id); // Remove the selected shoe from the remaining options
